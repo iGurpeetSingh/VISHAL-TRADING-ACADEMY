@@ -1,0 +1,543 @@
+/* ============================================
+   ABOUT ACADEMY SECTION
+   ============================================ */
+
+.vta-about {
+  padding: 100px 0;
+  background: #090909;
+  position: relative;
+}
+
+.vta-about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00C896, transparent);
+}
+
+.vta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vta-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vta-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #FFFFFF, #00C896);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 200, 150, 0.5);
+}
+
+.vta-section-subtitle {
+  font-size: 1.1rem;
+  color: #CFCFCF;
+}
+
+.vta-about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.vta-about-video-wrapper {
+  order: -1;
+}
+
+.vta-about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vta-about-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  border: 3px solid var(--accent-green);
+  box-shadow: 0 10px 40px var(--shadow-glow);
+  transition: transform 0.3s ease;
+}
+
+.vta-about-photo:hover {
+  transform: scale(1.05);
+}
+
+.vta-about-text-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vta-about-intro {
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1.8;
+  padding: 20px;
+  background: rgba(0, 200, 150, 0.05);
+  border-left: 4px solid #00C896;
+  border-radius: 8px;
+}
+
+.vta-about-text {
+  font-size: 1.1rem;
+  color: #CFCFCF;
+  line-height: 1.8;
+}
+
+
+
+.vta-about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vta-about-feature-item {
+  padding: 20px;
+  background: rgba(16, 16, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.vta-about-feature-item:hover {
+  border-color: #00C896;
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 200, 150, 0.3);
+}
+
+.vta-about-feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.vta-about-feature-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.vta-about-feature-item p {
+  font-size: 0.95rem;
+  color: #CFCFCF;
+}
+
+/* Mentor Section */
+.vta-about-mentor {
+  margin-top: 60px;
+  padding: 40px;
+  background: rgba(0, 200, 150, 0.05);
+  border: 1px solid rgba(0, 200, 150, 0.2);
+  border-radius: 16px;
+}
+
+.vta-mentor-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #FFFFFF, #00C896);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 200, 150, 0.5);
+}
+
+.vta-mentor-text {
+  font-size: 1.1rem;
+  color: #CFCFCF;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* Learning Section */
+.vta-about-learning {
+  margin-top: 60px;
+}
+
+.vta-learning-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+}
+
+.vta-learning-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 24px;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.vta-learning-list li {
+  padding: 8px 0 8px 28px;
+  color: #CFCFCF;
+  font-size: 1rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.vta-learning-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: #00C896;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Why Learn Section */
+.vta-why-learn {
+  margin-top: 60px;
+  padding: 40px;
+  background: rgba(0, 200, 150, 0.05);
+  border: 1px solid rgba(0, 200, 150, 0.2);
+  border-radius: 16px;
+}
+
+.vta-why-learn-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #FFFFFF, #00C896);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 200, 150, 0.5);
+}
+
+.vta-why-learn-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.vta-why-learn-list li {
+  padding: 6px 0 6px 24px;
+  color: #CFCFCF;
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.vta-why-learn-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: #00C896;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Mission & Vision */
+.vta-mission-vision {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.vta-mission-title,
+.vta-vision-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+}
+
+.vta-mission-text,
+.vta-vision-text {
+  font-size: 1rem;
+  color: #CFCFCF;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+
+
+/* ============================================
+   RIGHT SIDE - VIDEO PLAYER CSS (Naya Code)
+   ============================================ */
+
+.vta-about-video-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Background trading neon glow effect */
+.vta-video-glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(0, 200, 150, 0.2) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive 16:9 Video Box */
+.vta-video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 200, 150, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  background: #000000;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vta-video-container:hover {
+  border-color: #00C896;
+  box-shadow: 0 20px 40px rgba(0, 200, 150, 0.15);
+}
+
+/* Video/Iframe elements mapping */
+.vta-video-container iframe,
+.vta-video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .vta-section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-about {
+    padding: 70px 0 50px;
+  }
+
+  .vta-section-header {
+    margin-bottom: 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.7rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vta-about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vta-about-image {
+    order: -1;
+  }
+
+  .vta-about-photo {
+    max-width: 250px;
+    border-radius: 16px;
+  }
+
+  .vta-about-text-main {
+    gap: 16px;
+  }
+
+  .vta-about-intro {
+    font-size: 1rem;
+    padding: 14px;
+    border-left-width: 3px;
+  }
+
+  .vta-about-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .vta-about-features {
+    gap: 14px;
+  }
+
+  .vta-about-feature-item {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .vta-about-feature-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .vta-about-feature-item h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .vta-about-feature-item p {
+    font-size: 0.9rem;
+  }
+
+  .vta-video-container {
+    border-radius: 12px;
+    padding-bottom: 56.25%;
+  }
+
+  .vta-about-mentor {
+    margin-top: 40px;
+    padding: 24px;
+  }
+
+  .vta-mentor-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .vta-mentor-text {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .vta-about-learning {
+    margin-top: 40px;
+  }
+
+  .vta-learning-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .vta-learning-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vta-learning-list li {
+    font-size: 0.95rem;
+  }
+
+  .vta-why-learn {
+    margin-top: 40px;
+    padding: 24px;
+  }
+
+  .vta-why-learn-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .vta-why-learn-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vta-why-learn-list li {
+    font-size: 0.9rem;
+  }
+
+  .vta-mission-vision {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vta-mission-title,
+  .vta-vision-title {
+    font-size: 1.3rem;
+  }
+
+  .vta-mission-text,
+  .vta-vision-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-about {
+    padding: 60px 0 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.5rem;
+  }
+
+  .vta-about-photo {
+    max-width: 200px;
+  }
+
+  .vta-about-intro {
+    font-size: 0.95rem;
+  }
+
+  .vta-about-text {
+    font-size: 0.9rem;
+  }
+
+  .vta-about-mentor {
+    padding: 20px;
+  }
+
+  .vta-mentor-title {
+    font-size: 1.3rem;
+  }
+
+  .vta-mentor-text {
+    font-size: 0.95rem;
+  }
+
+  .vta-learning-title {
+    font-size: 1.2rem;
+  }
+
+  .vta-why-learn {
+    padding: 20px;
+  }
+
+  .vta-why-learn-title {
+    font-size: 1.3rem;
+  }
+}

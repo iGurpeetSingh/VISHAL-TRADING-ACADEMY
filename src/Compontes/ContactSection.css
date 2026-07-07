@@ -1,0 +1,259 @@
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+.vta-contact {
+  padding: 100px 0;
+  background: #090909;
+  position: relative;
+}
+
+.vta-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00C896, transparent);
+}
+
+.vta-contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.vta-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vta-contact-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(16, 16, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.vta-contact-item:hover {
+  border-color: #00C896;
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 200, 150, 0.3);
+}
+
+.vta-contact-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 200, 150, 0.1);
+  border: 1px solid rgba(0, 200, 150, 0.2);
+  color: var(--accent-green);
+}
+
+.vta-contact-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.vta-contact-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #FFFFFF;
+}
+
+.vta-contact-item p {
+  font-size: 0.95rem;
+  color: #CFCFCF;
+}
+
+.vta-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vta-contact-form input,
+.vta-contact-form select,
+.vta-contact-form textarea {
+  padding: 16px 20px;
+  background: rgba(16, 16, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.vta-contact-form input:focus,
+.vta-contact-form select:focus,
+.vta-contact-form textarea:focus {
+  outline: none;
+  border-color: #00C896;
+  box-shadow: 0 0 0 3px rgba(0, 200, 150, 0.2);
+}
+
+.vta-contact-form input::placeholder,
+.vta-contact-form textarea::placeholder {
+  color: #8C8C8C;
+}
+
+.vta-contact-form select {
+  color: #CFCFCF;
+  cursor: pointer;
+}
+
+.vta-contact-form select option {
+  background: #050505;
+  color: #FFFFFF;
+}
+
+.vta-contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-contact {
+    padding: 80px 0;
+  }
+
+  .vta-section-title {
+    font-size: 2rem;
+  }
+
+  .vta-contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .vta-contact-item {
+    padding: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-contact {
+    padding: 60px 0;
+  }
+
+  .vta-section-header {
+    margin-bottom: 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.7rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vta-contact-wrapper {
+    gap: 30px;
+  }
+
+  .vta-contact-info {
+    gap: 14px;
+  }
+
+  .vta-contact-item {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .vta-contact-icon {
+    font-size: 1.8rem;
+  }
+
+  .vta-contact-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .vta-contact-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .vta-contact-form {
+    gap: 14px;
+  }
+
+  .vta-contact-form input,
+  .vta-contact-form select,
+  .vta-contact-form textarea {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .vta-contact-form textarea {
+    min-height: 100px;
+  }
+
+  .vta-contact-form input:focus,
+  .vta-contact-form select:focus,
+  .vta-contact-form textarea:focus {
+    box-shadow: 0 0 0 2px rgba(0, 200, 150, 0.2);
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-contact {
+    padding: 50px 0;
+  }
+
+  .vta-section-title {
+    font-size: 1.5rem;
+  }
+
+  .vta-contact-wrapper {
+    gap: 24px;
+  }
+
+  .vta-contact-item {
+    padding: 12px;
+  }
+
+  .vta-contact-icon {
+    font-size: 1.6rem;
+  }
+
+  .vta-contact-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .vta-contact-item p {
+    font-size: 0.85rem;
+  }
+
+  .vta-contact-form input,
+  .vta-contact-form select,
+  .vta-contact-form textarea {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+}

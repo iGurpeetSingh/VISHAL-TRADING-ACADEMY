@@ -1,0 +1,275 @@
+/* ============================================
+   PRICING SECTION
+   ============================================ */
+
+.vta-pricing {
+  padding: 100px 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.vta-pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vta-pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vta-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.vta-pricing-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.vta-pricing-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--text-secondary);
+  animation: vta-pulse 2s infinite;
+  box-shadow: 0 4px 20px var(--shadow-glow);
+}
+
+@keyframes vta-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.vta-pricing-header {
+  margin-bottom: 20px;
+}
+
+.vta-price-original {
+  font-size: 2rem;
+  color: #8C8C8C;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.vta-price-original-label {
+  font-size: 1rem;
+  color: #CFCFCF;
+}
+
+.vta-pricing-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 24px 0;
+}
+
+.vta-price-special {
+  margin-bottom: 32px;
+}
+
+.vta-special-label {
+  font-size: 1.2rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.vta-special-amount {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent-green);
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 0 30px var(--shadow-glow);
+}
+
+.vta-special-sub {
+  font-size: 1.2rem;
+  color: #CFCFCF;
+}
+
+.vta-pricing-features {
+  text-align: left;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: rgba(0, 200, 150, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vta-pricing-features h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.vta-pricing-features ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vta-pricing-features li {
+  color: #CFCFCF;
+  font-size: 0.95rem;
+  padding-left: 24px;
+  position: relative;
+}
+
+.vta-pricing-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.vta-btn-pricing {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.vta-limited-text {
+  color: #CFCFCF;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-pricing {
+    padding: 80px 0;
+  }
+
+  .vta-section-title {
+    font-size: 2rem;
+  }
+
+  .vta-pricing-card {
+    padding: 32px;
+  }
+
+  .vta-special-amount {
+    font-size: 3rem;
+  }
+
+  .vta-pricing-grid {
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-pricing {
+    padding: 60px 0;
+  }
+
+  .vta-section-header {
+    margin-bottom: 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.7rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vta-pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vta-pricing-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .vta-price-original {
+    font-size: 1.2rem;
+  }
+
+  .vta-price-original-label {
+    font-size: 0.9rem;
+  }
+
+  .vta-special-label {
+    font-size: 1rem;
+  }
+
+  .vta-special-amount {
+    font-size: 2.2rem;
+  }
+
+  .vta-special-sub {
+    font-size: 1rem;
+  }
+
+  .vta-pricing-features {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .vta-pricing-features h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .vta-pricing-features li {
+    font-size: 0.9rem;
+    padding-left: 20px;
+  }
+
+  .vta-pricing-features li::before {
+    font-size: 1rem;
+  }
+
+  .vta-btn-pricing {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+
+  .vta-limited-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-pricing {
+    padding: 50px 0;
+  }
+
+  .vta-section-title {
+    font-size: 1.5rem;
+  }
+
+  .vta-pricing-card {
+    padding: 20px;
+  }
+
+  .vta-special-amount {
+    font-size: 2rem;
+  }
+
+  .vta-price-original {
+    font-size: 1.1rem;
+  }
+}

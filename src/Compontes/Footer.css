@@ -1,0 +1,213 @@
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+
+.vta-footer {
+  background: #101010;
+  padding: 80px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vta-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.vta-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.vta-logo-icon {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 10px #00C896);
+}
+
+.vta-logo-text {
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.vta-footer-description {
+  color: #CFCFCF;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.vta-footer-tagline {
+  font-size: 1.1rem;
+  color: #00C896;
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(0, 200, 150, 0.3);
+}
+
+.vta-footer-links h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.vta-footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vta-footer-links a {
+  color: #CFCFCF;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vta-footer-links a:hover {
+  color: var(--accent-bright);
+  transform: translateX(4px);
+}
+
+.vta-footer-links a svg {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.vta-footer-links a:hover svg {
+  opacity: 1;
+  stroke: var(--accent-bright);
+}
+
+.vta-social-links li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vta-social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vta-footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-footer {
+    padding: 60px 0 24px;
+  }
+
+  .vta-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-footer {
+    padding: 60px 0 20px;
+  }
+
+  .vta-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vta-footer-logo {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .vta-footer-description {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .vta-footer-tagline {
+    font-size: 1rem;
+  }
+
+  .vta-footer-links h4 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .vta-footer-links ul {
+    gap: 12px;
+  }
+
+  .vta-footer-links a {
+    font-size: 0.95rem;
+  }
+
+  .vta-footer-bottom {
+    padding-top: 24px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-footer {
+    padding: 50px 0 16px;
+  }
+
+  .vta-footer-grid {
+    gap: 24px;
+  }
+
+  .vta-footer-logo {
+    font-size: 1.15rem;
+  }
+
+  .vta-footer-description {
+    font-size: 0.9rem;
+  }
+
+  .vta-footer-tagline {
+    font-size: 0.95rem;
+  }
+
+  .vta-footer-links h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .vta-footer-links ul {
+    gap: 10px;
+  }
+
+  .vta-footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .vta-footer-bottom {
+    padding-top: 20px;
+    font-size: 0.8rem;
+  }
+}

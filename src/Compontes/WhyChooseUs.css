@@ -1,0 +1,146 @@
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.vta-why-us {
+  padding: 100px 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.vta-why-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+}
+
+.vta-why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.vta-why-us-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.vta-why-us-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-green);
+  box-shadow: 0 5px 20px var(--shadow-glow);
+  background: rgba(0, 200, 150, 0.05);
+}
+
+.vta-why-us-icon {
+  font-size: 1.5rem;
+  color: var(--accent-green);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vta-why-us-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.vta-why-us-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-why-us {
+    padding: 80px 0;
+  }
+
+  .vta-section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-why-us {
+    padding: 60px 0;
+  }
+
+  .vta-section-header {
+    margin-bottom: 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.7rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vta-why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .vta-why-us-card {
+    padding: 16px;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .vta-why-us-icon {
+    font-size: 1.5rem;
+  }
+
+  .vta-why-us-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .vta-why-us-text {
+    font-size: 0.95rem;
+  }
+
+  .vta-why-us-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-why-us {
+    padding: 50px 0 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.5rem;
+  }
+
+  .vta-why-us-card {
+    padding: 14px;
+  }
+
+  .vta-why-us-text {
+    font-size: 0.9rem;
+  }
+}

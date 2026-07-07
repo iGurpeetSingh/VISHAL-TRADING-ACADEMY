@@ -1,0 +1,207 @@
+/* Container section setup */
+.vta-section-wrapper {
+  width: 100%;
+  padding: 60px 0;
+  background: #090909;
+}
+
+/* Flexbox Container Layout */
+.vta-flex-layout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px
+  ;
+  width: 100%;
+}
+
+/* Left Side - Cards Wrapper */
+.vta-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1.1;
+}
+
+/* Individual Card Styling */
+.vta-card-item {
+  padding: 20px;
+  background: rgba(16, 16, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.vta-card-item:hover {
+  border-color: #00C896;
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 200, 150, 0.2);
+}
+
+.vta-card-icon {
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #00C896;
+}
+
+.vta-card-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.vta-card-item p {
+  font-size: 0.95rem;
+  color: #CFCFCF;
+}
+
+/* Right Side - Video Block Wrapper */
+.vta-video-wrapper {
+  position: relative;
+  flex: 0.9;
+  width: 100%;
+}
+
+/* Glow Effect Backing */
+.vta-video-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 80vh;
+  height: 80vh;
+  
+  filter: blur(45px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Widescreen Video Box Box-Model */
+.vta-video-box {
+  border-radius: 2%;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Perfect 16:9 Aspect Ratio */
+  height: 80vh;
+  border-radius: 16px;
+  overflow: hidden;
+ 
+  
+  z-index: 2;
+ 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Absolute sizing mapping for video/iframe elements */
+.vta-video-box video,
+.vta-video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover; /* Video container mein bina kute-phte adjust ho jayegi */
+}
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-section-wrapper {
+    padding: 80px 0;
+  }
+
+  .vta-section-title {
+    font-size: 2rem;
+  }
+
+  .vta-video-box {
+    height: 60vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-section-wrapper {
+    padding: 60px 0;
+  }
+
+  .vta-section-header {
+    margin-bottom: 40px;
+  }
+
+  .vta-flex-layout-container {
+    flex-direction: column; 
+    gap: 30px;
+  }
+
+  .vta-card-item {
+    padding: 20px;
+  }
+
+  .vta-card-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .vta-card-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .vta-card-item:hover {
+    transform: none;
+  }
+
+  .vta-video-wrapper {
+    order: -1;
+  }
+
+  .vta-video-box {
+    height: 50vh;
+    border-radius: 12px;
+  }
+  
+  .vta-video-glow {
+    width: 60vh;
+    height: 60vh;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-section-wrapper {
+    padding: 50px 0;
+  }
+
+  .vta-section-title {
+    font-size: 1.5rem;
+  }
+
+  .vta-card-item {
+    padding: 16px;
+  }
+
+  .vta-card-item h4 {
+    font-size: 1rem;
+  }
+
+  .vta-card-item p {
+    font-size: 0.9rem;
+  }
+
+  .vta-video-box {
+    height: 40vh;
+    border-radius: 10px;
+  }
+  
+  .vta-video-glow {
+    width: 50vh;
+    height: 50vh;
+  }
+}

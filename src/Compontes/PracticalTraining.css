@@ -1,0 +1,174 @@
+/* ============================================
+   PRACTICAL TRAINING SECTION
+   ============================================ */
+
+.vta-practical {
+  padding: 100px 0;
+  background: #090909;
+  position: relative;
+}
+
+.vta-practical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00C896, transparent);
+}
+
+.vta-practical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.vta-practical-card {
+  background: rgba(16, 16, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.vta-practical-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00C896, #00D4FF);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.vta-practical-card:hover::before {
+  transform: scaleX(1);
+}
+
+.vta-practical-card:hover {
+  transform: translateY(-5px);
+  border-color: #00C896;
+  box-shadow: 0 10px 40px rgba(0, 200, 150, 0.3);
+  background: rgba(0, 200, 150, 0.05);
+}
+
+.vta-practical-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.vta-practical-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #FFFFFF;
+}
+
+.vta-practical-card p {
+  font-size: 0.95rem;
+  color: #CFCFCF;
+  line-height: 1.7;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .vta-practical {
+    padding: 80px 0;
+  }
+
+  .vta-section-title {
+    font-size: 2rem;
+  }
+
+  .vta-practical-card {
+    padding: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .vta-practical {
+    padding: 60px 0;
+  }
+
+  .vta-section-header {
+    margin-bottom: 40px;
+  }
+
+  .vta-section-title {
+    font-size: 1.7rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vta-practical-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .vta-practical-card {
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .vta-practical-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  .vta-practical-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .vta-practical-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .vta-practical-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .vta-practical {
+    padding: 50px 0;
+  }
+
+  .vta-section-title {
+    font-size: 1.5rem;
+  }
+
+  .vta-practical-card {
+    padding: 16px;
+  }
+
+  .vta-practical-icon {
+    font-size: 2.2rem;
+  }
+
+  .vta-practical-card h3 {
+    font-size: 1rem;
+  }
+
+  .vta-practical-card p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   VISHAL TRADING ACADEMY - GLOBAL STYLES
+   ========================================================================== */
+
+/* Global App Container */
+.app {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   RESPONSIVE CONTAINER STYLES
+   ============================================ */
+
+.vta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure all grid containers are responsive */
+.vta-section-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive Media Queries for App-level */
+@media (max-width: 640px) {
+  .vta-container {
+    padding: 0 16px;
+  }
+}
