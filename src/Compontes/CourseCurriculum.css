@@ -1,9 +1,9 @@
 /* ============================================
-   COURSE CURRICULUM SECTION
+   COURSE CURRICULUM SECTION - New Design
    ============================================ */
 
 :root {
-  --accent-green: #00C896;
+  --accent-green: #00ff88;
   --accent-cyan: #00E5FF;
   --bg-secondary: #0a0a0a;
   --text-primary: #ffffff;
@@ -12,11 +12,14 @@
 }
 
 .vta-curriculum {
-  padding: 80px 0;
+  padding: 100px 0;
   background: var(--bg-secondary);
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 200, 150, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 232, 176, 0.05) 0%, transparent 40%);
 }
 
 .vta-curriculum::before {
@@ -29,7 +32,6 @@
   background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
 }
 
-/* Container to keep content centered */
 .vta-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -38,160 +40,161 @@
   box-sizing: border-box;
 }
 
-.vta-curriculum-timeline {
-  display: flex;
-  flex-direction: column;
+.vta-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vta-section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #00ff88, #00E5FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vta-section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.vta-curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   width: 100%;
 }
 
-/* Individual Module Card */
+/* Module Card - New Design */
 .vta-module-card {
   background: rgb(20 20 20 / 70%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
-  display: flex;
-  gap: 24px;
-  align-items: center; 
   backdrop-filter: blur(20px);
   box-sizing: border-box;
-}
-
-.vta-module-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--accent-green), var(--accent-cyan));
-  transform: scaleY(0);
-  transition: transform 0.3s ease;
-}
-
-.vta-module-card:hover::before {
-  transform: scaleY(1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .vta-module-card:hover {
-  transform: translateX(5px);
+  transform: translateY(-8px);
   border-color: var(--accent-green);
-  box-shadow: 0 10px 40px var(--shadow-glow);
-  background: rgba(0, 200, 150, 0.03);
+  box-shadow: 0 20px 60px var(--shadow-glow);
+  background: rgba(0, 200, 150, 0.05);
 }
 
-/* Timeline Number Marker */
-.vta-module-timeline-marker {
+/* Module Header with Number Badge */
+.vta-module-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vta-module-number-badge {
   flex-shrink: 0;
 }
 
 .vta-module-number {
-  background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+  background: var(--accent-green);
   color: #000000;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 15px var(--shadow-glow);
-}
-
-/* Flex Layout Split (Left Content vs Right Image) */
-.vta-module-main-body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 30px;
-}
-
-.vta-module-content {
-  flex: 1;
-}
-
-.vta-module-content h3 {
+  font-weight: 800;
   font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-  line-height: 1.4;
+  box-shadow: 0 4px 20px var(--shadow-glow);
+  font-family: monospace;
 }
 
-/* Grid layout for curriculum checklist */
-.vta-module-items {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 12px 24px;
-  padding: 0;
+.vta-module-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
   margin: 0;
 }
 
-.vta-module-items li {
-  padding: 2px 0 2px 22px;
+/* Module Image */
+.vta-module-image-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.vta-module-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.vta-module-card:hover .vta-module-image {
+  transform: scale(1.05);
+}
+
+/* Module Description */
+.vta-module-description {
+  flex-grow: 1;
+}
+
+.vta-module-description p {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  position: relative;
-  line-height: 1.5;
-}
-
-.vta-module-items li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  top: 1px;
-  color: var(--accent-green);
-  font-weight: bold;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ============================================
-   RIGHT SIDE IMAGE DESIGN
-   ============================================ */
-.vta-module-image-zone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.vta-module-img {
-  width: 389px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-/* Card hover effect on image */
-.vta-module-card:hover .vta-module-img {
-  opacity: 1;
-  border-color: var(--accent-green);
-  transform: scale(1.05) rotate(-2deg);
-  box-shadow: 0 5px 15px rgba(0, 200, 150, 0.2);
-}
-
-/* ============================================
-   RESPONSIVE DESIGN (Tablets & Mobile)
+   RESPONSIVE DESIGN
    ============================================ */
 
-/* Large Tablets / Small Laptops */
+/* Large Tablets */
 @media (max-width: 1024px) {
-  .vta-module-items {
-    gap: 12px 16px;
+  .vta-curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .vta-section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .vta-curriculum {
+    padding: 80px 0;
+  }
+
+  .vta-curriculum-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vta-section-title {
+    font-size: 2.2rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 1rem;
   }
 
   .vta-module-card {
-    padding: 24px;
-    gap: 20px;
+    padding: 20px;
   }
 
   .vta-module-number {
@@ -200,114 +203,51 @@
     font-size: 1.1rem;
   }
 
-  .vta-module-img {
-    width: 90px;
-    height: 90px;
+  .vta-module-title {
+    font-size: 1.1rem;
   }
 }
 
-/* Medium Tablets (Landscape/Portrait Shift) */
-@media (max-width: 900px) {
-  .vta-module-items {
-    grid-template-columns: 1fr; /* 2 Column se 1 Column layout */
-  }
-  
-  .vta-module-img {
-    width: 90px;
-    height: 90px;
-  }
-}
-
-/* Mobile Screens (Phones) */
-@media (max-width: 680px) {
+/* Mobile */
+@media (max-width: 640px) {
   .vta-curriculum {
-    padding: 50px 0;
+    padding: 60px 0;
   }
 
   .vta-section-header {
     margin-bottom: 40px;
   }
 
+  .vta-section-title {
+    font-size: 2rem;
+  }
+
+  .vta-section-subtitle {
+    font-size: 0.95rem;
+  }
+
   .vta-module-card {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    padding: 16px;
     gap: 16px;
-    border-radius: 12px;
+    border-radius: 16px;
   }
 
-  .vta-module-main-body {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .vta-module-image-zone {
-    width: 100%;
-    justify-content: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 16px;
-  }
-
-  .vta-module-img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .vta-module-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-  }
-
-  .vta-module-items {
-    gap: 10px;
-  }
-
-  .vta-module-items li {
-    font-size: 0.9rem;
-    padding: 3px 0 3px 20px;
-    line-height: 1.6;
+  .vta-module-header {
+    gap: 12px;
   }
 
   .vta-module-number {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+    border-radius: 10px;
   }
 
-  /* Hover translation disable kiya mobile touch issues se bachne ke liye */
-  .vta-module-card:hover {
-    transform: translateY(-2px);
-  }
-}
-
-/* Extra Small Mobile */
-@media (max-width: 400px) {
-  .vta-curriculum {
-    padding: 40px 0;
-  }
-
-  .vta-module-card {
-    padding: 16px;
-    gap: 12px;
-  }
-
-  .vta-module-number {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
-  }
-
-  .vta-module-content h3 {
+  .vta-module-title {
     font-size: 1rem;
   }
 
-  .vta-module-items li {
-    font-size: 0.85rem;
-  }
-
-  .vta-module-img {
-    width: 70px;
-    height: 70px;
+  .vta-module-description p {
+    font-size: 0.9rem;
   }
 }

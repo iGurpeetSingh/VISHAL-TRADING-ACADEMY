@@ -104,6 +104,27 @@
   box-shadow: 0 6px 30px rgba(0, 200, 150, 0.4);
 }
 
+/* Desktop Enroll Button */
+.vta-btn-enroll-desktop {
+  display: block;
+  background: linear-gradient(135deg, #00C896, #00E676);
+  color: #000000;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 200, 150, 0.3);
+  text-decoration: none;
+}
+
+.vta-btn-enroll-desktop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(0, 200, 150, 0.4);
+}
+
 /* Hamburger Menu Toggle Button */
 .vta-menu-toggle {
   display: none;
@@ -169,6 +190,10 @@
   
   .vta-logo-image {
     height: 40px;
+  }
+
+  .vta-btn-enroll-desktop {
+    display: none;
   }
 
   .vta-nav-links {

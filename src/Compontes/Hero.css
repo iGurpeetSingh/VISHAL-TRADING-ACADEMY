@@ -1,5 +1,5 @@
 /* ============================================
-   HERO SECTION
+   HERO SECTION - Modern Design
    ============================================ */
 
 .vta-hero {
@@ -8,8 +8,12 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 100px 0 80px;
-  background-color: var(--bg-primary);
+  padding: 120px 0 100px;
+  background: #0a1a0f;
+  background-image: 
+    radial-gradient(circle at 70% 30%, rgba(0, 200, 150, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 232, 176, 0.08) 0%, transparent 60%);
 }
 
 .vta-hero-background {
@@ -28,8 +32,8 @@
 .vta-orb-1 {
   width: 500px;
   height: 500px;
-  background: var(--accent-green);
-  opacity: 0.15;
+  background: #00ff88;
+  opacity: 0.12;
   top: -200px;
   right: -100px;
   animation-delay: 0s;
@@ -38,7 +42,7 @@
 .vta-orb-2 {
   width: 400px;
   height: 400px;
-  background: var(--accent-cyan);
+  background: #00ff88;
   opacity: 0.1;
   bottom: -150px;
   left: -100px;
@@ -48,8 +52,8 @@
 .vta-orb-3 {
   width: 300px;
   height: 300px;
-  background: var(--accent-bright);
-  opacity: 0.1;
+  background: #00ff88;
+  opacity: 0.06;
   top: 50%;
   left: 50%;
   animation-delay: 10s;
@@ -65,17 +69,16 @@
 .vta-hero-container {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  text-align: center;
 }
 
 .vta-hero-content {
   animation: vta-fadeInUp 1s ease;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @keyframes vta-fadeInUp {
@@ -93,15 +96,15 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 200, 150, 0.1);
-  border: 1px solid var(--accent-green);
-  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 18px;
   border-radius: 50px;
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent-green);
-  margin-bottom: 24px;
-  box-shadow: 0 0 20px var(--shadow-glow);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+  backdrop-filter: blur(10px);
 }
 
 .vta-badge-icon {
@@ -109,87 +112,45 @@
 }
 
 .vta-hero-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  
-  -webkit-background-clip: text;
-  
-  background-clip: text;
-  text-shadow: 0 0 30px var(--shadow-glow);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #ffffff;
+  letter-spacing: -1px;
 }
 
 .vta-hero-tagline {
-  font-size: 1.2rem;
-  color: var(--accent-cyan);
-  font-weight: 600;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px var(--shadow-cyan);
+  line-height: 1.4;
 }
 
 .vta-hero-description {
   font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 24px;
-  line-height: 1.4;
-}
-
-.vta-offer-box {
-  background: rgba(0, 200, 150, 0.05);
-  border: 2px solid var(--accent-green);
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 32px;
-  text-align: center;
-  box-shadow: 0 0 30px var(--shadow-glow);
-}
-
-.vta-offer-badge {
-  background: linear-gradient(135deg, var(--accent-green), var(--accent-bright));
-  color: #000000;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 12px;
-  box-shadow: 0 4px 15px var(--shadow-glow);
-}
-
-.vta-price-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.vta-original-price {
-  font-size: 1.5rem;
-  color: var(--text-muted);
-  text-decoration: line-through;
-}
-
-.vta-offer-price {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--accent-green);
-  text-shadow: 0 0 20px var(--shadow-glow);
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .vta-hero-buttons {
   display: flex;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 18px;
+  margin-top: 32px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .vta-btn-primary {
-  background: linear-gradient(135deg, var(--accent-green), var(--accent-bright));
-  color: #000000;
-  border: none;
-  padding: 16px 32px;
+  background: transparent;
+  color: #00ff88;
+  border: 2px solid #00ff88;
+  padding: 16px 36px;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
@@ -197,15 +158,16 @@
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 10px var(--shadow-glow);
+  gap: 10px;
   text-decoration: none;
   font-family: var(--font-primary);
+  backdrop-filter: blur(10px);
 }
 
 .vta-btn-primary:hover {
+  background: rgba(0, 255, 136, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px var(--shadow-glow);
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.3);
 }
 
 .vta-btn-arrow {
@@ -219,123 +181,30 @@
 
 .vta-btn-secondary {
   background: transparent;
-  color: var(--text-primary);
-  border: px solid var(--border-color);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 16px 32px;
   border-radius: 12px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
   font-family: var(--font-primary);
 }
 
 .vta-btn-secondary:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px var(--shadow-cyan);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
 }
 
 .vta-play-icon {
   font-size: 0.9rem;
-}
-
-.vta-hero-visual {
-  animation: vta-fadeIn 1s ease 0.3s backwards;
-}
-
-@keyframes vta-fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.vta-dashboard-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-  transition: transform 0.3s ease;
-  border-top: 2px solid var(--accent-green);
-}
-
-.vta-dashboard-card:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-}
-
-.vta-dashboard-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.vta-dashboard-dots {
-  display: flex;
-  gap: 6px;
-}
-
-.vta-dashboard-dots span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  opacity: 0.3;
-}
-
-.vta-dashboard-dots span:first-child {
-  opacity: 1;
-  box-shadow: 0 0 10px var(--shadow-glow);
-}
-
-.vta-dashboard-title {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.vta-chart-container {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 16px;
-  border: 1px solid var(--border-color);
-}
-
-.vta-candlestick-chart {
-  width: 100%;
-  height: auto;
-}
-
-.vta-profit-indicator {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
-  background: rgba(0, 200, 150, 0.1);
-  border-radius: 12px;
-  border: 1px solid var(--accent-green);
-}
-
-.vta-profit-text {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--accent-green);
-  text-shadow: 0 0 10px var(--shadow-glow);
-}
-
-.vta-profit-percent {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--accent-cyan);
-  text-shadow: 0 0 10px var(--shadow-cyan);
 }
 
 /* ============================================
@@ -350,8 +219,12 @@
     text-align: center;
   }
 
+  .vta-hero-content {
+    max-width: 100%;
+  }
+
   .vta-hero-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .vta-hero-buttons {
@@ -359,8 +232,24 @@
   }
 
   .vta-hero-visual {
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
+  }
+
+  .vta-giant-icon {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Tablet & Small Desktop */
+@media (max-width: 968px) {
+  .vta-hero {
+    padding: 100px 0 80px;
+  }
+
+  .vta-hero-title {
+    font-size: 2.8rem;
   }
 }
 
@@ -371,7 +260,7 @@
   }
 
   .vta-hero-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .vta-hero-tagline {
@@ -380,22 +269,6 @@
 
   .vta-hero-description {
     font-size: 1rem;
-  }
-
-  .vta-offer-box {
-    padding: 16px;
-  }
-
-  .vta-price-container {
-    gap: 12px;
-  }
-
-  .vta-original-price {
-    font-size: 1.2rem;
-  }
-
-  .vta-offer-price {
-    font-size: 2rem;
   }
 
   .vta-btn-primary,
@@ -414,8 +287,18 @@
     margin-top: 20px;
   }
 
-  .vta-dashboard-card {
-    padding: 16px;
-    transform: none;
+  .vta-giant-icon {
+    width: 180px;
+    height: 180px;
+  }
+
+  .vta-planet-1 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .vta-planet-2 {
+    width: 60px;
+    height: 60px;
   }
 }

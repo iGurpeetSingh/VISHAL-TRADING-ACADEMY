@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import logoImage from '../assets/34.png';
 
 const Navbar = ({ onEnrollClick, scrolled }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -13,22 +15,21 @@ const Navbar = ({ onEnrollClick, scrolled }) => {
     setIsOpen(false);
   };
 
+  const isHomePage = location.pathname === '/';
+
   return (
     <nav className={`vta-navbar ${scrolled ? 'vta-scrolled' : ''}`}>
       <div className="vta-nav-container">
         {/* Logo */}
-        <a href="#hero" className="vta-logo" onClick={handleLinkClick}>
+        <Link to="/" className="vta-logo" onClick={handleLinkClick}>
           <img src={logoImage} alt="Vishal Trading Academy" className="vta-logo-image" />
-        </a>
+        </Link>
 
         {/* Navigation Links & Mobile Actions */}
         <ul className={`vta-nav-links ${isOpen ? 'vta-mobile-visible' : ''}`}>
-          <li><a href="#about" className="vta-nav-link" onClick={handleLinkClick}>About</a></li>
-          <li><a href="#curriculum" className="vta-nav-link" onClick={handleLinkClick}>Curriculum</a></li>
-          <li><a href="#why-us" className="vta-nav-link" onClick={handleLinkClick}>Why Us</a></li>
-          <li><a href="#features" className="vta-nav-link" onClick={handleLinkClick}>Features</a></li>
-          <li><a href="#faq" className="vta-nav-link" onClick={handleLinkClick}>FAQ</a></li>
-          <li><a href="#contact" className="vta-nav-link" onClick={handleLinkClick}>Contact</a></li>
+          <li><Link to="/" className="vta-nav-link" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/about" className="vta-nav-link" onClick={handleLinkClick}>About</Link></li>
+          <li><Link to="/contact" className="vta-nav-link" onClick={handleLinkClick}>Contact</Link></li>
           
           {/* Mobile Only CTA Button */}
           <li className="vta-mobile-cta">
@@ -37,6 +38,8 @@ const Navbar = ({ onEnrollClick, scrolled }) => {
             </button>
           </li>
         </ul>
+
+     
 
         {/* Hamburger Icon */}
         <button 
