@@ -43,7 +43,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4>Email</h4>
-                <p>vishaltradingacademy02@gmail.com</p>
+                <p>vishaltradingacademy@gmail.com</p>
               </div>
             </div>
             <div className="vta-contact-item">
